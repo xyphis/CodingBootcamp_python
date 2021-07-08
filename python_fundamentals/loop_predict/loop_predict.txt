@@ -1,0 +1,114 @@
+#1
+for i in range(1, 10, 1):
+    print(i)
+
+This will start at 1, print, and repeat until i = 10 then stop without printing 10.
+Output: 1,2,3,4,5,6,7,8,9
+
+#2
+for t in range(1, 10, 3):
+    print(t)
+
+Start at 1, print, increment by 3, stop at 10.
+Output: 1,4,7
+
+#3
+for y in range(5):
+    if y < 5:
+        print(y)
+    elif y == 3:
+        print("y is 3")
+
+Start at 0, end at 5, increment by 1.
+Conditional if y is less than 5 print. 
+The first true statement executes and iterate through loop again.
+This means elif never triggers, 
+if condition y == 3 happens before y < 5 then it would trigger.
+
+#4
+for j in range(20, 1, -3):
+    print(j)
+
+Start at 20, end at 1, increment by -3 (decrement by 3). Print.
+Output: 20, 17, 14, 11, 8, 5, 2
+
+#5
+cities = ["London", "Paris", "Tokyo"]
+for city in cities:
+    print(city)
+
+Iterate through a list, for variable "city" in list "cities" print variable.
+Output: London, Paris, Tokyo
+
+#6
+numbers = [7, 13, 8, 42]
+for x in range(0, len(numbers)):
+    print(x)
+    print(numbers[x])
+if numbers[len(numbers) - 1] == 42:
+    print("The answer to life, the universe, and everything.")
+
+Iterate through the length of a list of integers, print iteration and value of iteration within the list.
+Begin at index 0.
+print 0 and 7
+print 1 and 13
+print 2 and 8
+print 3 and 42
+
+!Conditional: 
+inside of the numbers list, 
+take the length of the list (4) - 1 as the index value
+list index 3 if this value is equivalent to 42
+Execute print statement "the answer to life, the universe, and everything."
+numbers[3] is 42 so the print statement executes.
+
+#7
+for num in range(10):
+    if num % 2 == 0:
+        print("Hello")
+    elif num % 4 == 0:
+        print("World")
+    else:
+        print(num)
+
+Start at 0, end at 10, increment by +1.
+if the iteration is divisible by 2 print Hello.
+If divisible by 4 print World. This will never execute since the first true conditional restarts the loop.
+Otherwise print the number.
+Output: Hello, 1, Hello, 3, Hello, 5, Hello, 7, Hello, 9
+
+#9
+pet_info = {
+    "name": "Fido", 
+    "age": 4, 
+    "trick": "rolls over"
+}
+for key in pet_info:
+    print(key)
+    print(pet_info[key])
+
+
+Loop through a dictionary
+print iteration
+print dictionary[iteration]
+output: 0, name, 1, age, 2, trick
+
+This apparantly prints the key:value pairs inside the dictionary.
+Not the iteration that it is using to loop through the dictionary. 
+
+#10
+things_to_remember = {
+    "First": "use the 20 minute rule and use the platform and other resources to find my answer",
+    "Second": "ask my classmates for help, like how I would ask a fellow employee at my job",
+    "Third": "ask an available TA in a public setting, so everyone can benefit from my question",
+    "Fourth": "ask an available instructor"
+}
+for num, step in things_to_remember.items():
+    print(num + ", I will " + step)
+
+I'm guessing that in the dictionary the key is the index
+the value is paired with the index which is no longer just a number.
+So for every index comma value within the dictionary.
+print index concatenate string ", I will" additionally concatenate the value.
+So it will come out to be:
+"First, I will use the 20 minute rule . . ." etc. but I have no idea why this works.
